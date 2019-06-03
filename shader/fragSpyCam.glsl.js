@@ -20,4 +20,5 @@ void main(){
     float tv=mix(b,mix(b/2.0,abs(sin(y))/1.5,0.5),0.5)+noise/16.0;
     c=vec3(c.r*0.3+c.g*0.59+c.b*0.11)*tint;
     gl_FragColor=vec4(((c-0.5)*4.0+1.0)*vec3(tv),1.0);
-}`
+}
+`;
