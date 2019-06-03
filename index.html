@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="de" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <link rel="stylesheet" type="text/css" href="theme.css">
+    <link href='https://fonts.googleapis.com/css?family=Roboto' rel='stylesheet'>
+    <script defer src="https://use.fontawesome.com/releases/v5.7.2/js/all.js" integrity="sha384-0pzryjIRos8mFBWMzSSZApWtPl/5++eIfzYmTgBBmXYdhvxPc+XcFEk+zJwDgWbP" crossorigin="anonymous"></script>
+    <title>Mobile Computing Camera Web App</title>
+  </head>
+  <body>
+    <header>
+      <img class="logo" src="assets/logo.png" alt="Logo">
+    </header>
+    <center>
+      <div id ="div-before" class="camera-permissions">
+            <p>Klicke auf den Button, um zu beginnen.</p>
+            <button class="hvr-buzz-out btn-camera-access" id="btn-camera-access"><i class="link-icon fa fa-camera"></i>Verwende meine Kamera</button>
+      </div>
+      <div id="div-after" style="display: none">
+          <div class="buttons">
+              <button class="btn-filter-select" id="button-prev" oncontextmenu="event.preventDefault();"><i class="fas fa-angle-left"></i></button>
+              <button class="btn-filter" id="button-current" oncontextmenu="event.preventDefault();">Current effect</button>
+              <button class="btn-filter-select" id="button-next" oncontextmenu="event.preventDefault();"><i class="fas fa-angle-right"></i></button>
+              <button class="btn-filter-select filter-block" id="btn-download" oncontextmenu="event.preventDefault();"><i class="fas fa-download"></i></button>
+              <button class="btn-filter-select filter-block" id="btn-cancel" oncontextmenu="event.preventDefault();"><i class="fas fa-undo"></i></button>
+            </div>
+            <div class="cam-box">
+              <video style="display: none"></video>
+              <canvas id="result" width='884px' height='480px'></canvas>
+            </div>
+            <div class="controls">
+              <button class="take-photo" id="take-photo" type="button"><span id="countdowntimer"></span><i class="fas fa-camera" id="camera-icon"></i></button>
+            </div>
+      </div>
+    </center>
+  </body>
+
+<script type="module" src="app2.js"></script>
+</html>
